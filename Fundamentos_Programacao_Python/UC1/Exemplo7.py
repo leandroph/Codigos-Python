@@ -53,7 +53,7 @@ def cadastrar_produto() -> None:
     }
 
     estoque.append(produto)
-    print(f"\n✅ Produto '{nome}' cadastrado com sucesso! ID: {novo_id}")
+    print(f"\n Produto '{nome}' cadastrado com sucesso! ID: {novo_id}")
 
 
 def buscar_produto() -> None:
@@ -84,7 +84,7 @@ def buscar_produto() -> None:
         print(f"Preço: R$ {encontrado['preco']:.2f}")
         print("=" * 30)
     else:
-        print(f"\n❌ Produto com ID {id_busca} não encontrado.")
+        print(f"\n Produto com ID {id_busca} não encontrado.")
 
 
 def remover_produto() -> None:
@@ -109,9 +109,9 @@ def remover_produto() -> None:
     if indice_para_remover != -1:
         # pop(indice) remove o item naquela posição e o retorna
         removido = estoque.pop(indice_para_remover)
-        print(f"\n🗑️  Produto '{removido['nome']}' removido com sucesso!")
+        print(f"\n🗑  Produto '{removido['nome']}' removido com sucesso!")
     else:
-        print(f"\n❌ Produto com ID {id_remove} não encontrado.")
+        print(f"\n Produto com ID {id_remove} não encontrado.")
 
 
 def relatorio_geral() -> None:
