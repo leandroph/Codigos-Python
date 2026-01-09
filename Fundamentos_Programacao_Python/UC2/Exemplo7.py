@@ -7,7 +7,7 @@ def converter_batch_json(pasta_jsons: str):
     pasta = Path(pasta_jsons)
     lista_dados = []
 
-    print("📂 Lendo arquivos JSON...")
+    print(" Lendo arquivos JSON...")
 
     arquivos = list(pasta.glob("*.json"))
     if not arquivos:
@@ -32,14 +32,14 @@ def converter_batch_json(pasta_jsons: str):
                             lista_dados.append(item)
 
         except json.JSONDecodeError:
-            print(f"⚠️ Erro ao ler JSON: {arquivo.name}")
+            print(f" Erro ao ler JSON: {arquivo.name}")
 
     if lista_dados:
-        print("💾 Gerando Excel...")
+        print(" Gerando Excel...")
         df = pd.DataFrame(lista_dados)
 
         saida = pasta / "Consolidado_Clientes.xlsx"
         df.to_excel(saida, index=False)
-        print(f"✅ Conversão concluída! {len(lista_dados)} registros salvos em {saida.name}")
+        print(f" Conversão concluída! {len(lista_dados)} registros salvos em {saida.name}")
     else:
         print("Nenhum dado válido extraído.")

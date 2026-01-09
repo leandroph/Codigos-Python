@@ -28,4 +28,4 @@ def extrair_emails_dump(arquivo_entrada: str):
         for email in emails_ordenados:
             f.write(f"{email}\n")
 
-    print(f"✅ Extração concluída. {len(emails_ordenados)} e-mails únicos salvos.")
+    print(f" Extração concluída. {len(emails_ordenados)} e-mails únicos salvos.")

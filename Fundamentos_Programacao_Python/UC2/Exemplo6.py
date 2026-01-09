@@ -10,7 +10,7 @@ def backup_incremental(origem: str, destino: str):
     copiados = 0
     ignorados = 0
 
-    print(f"🔄 Sincronizando de {src.name} para {dst.name}...")
+    print(f" Sincronizando de {src.name} para {dst.name}...")
 
     # rglob('*') pega arquivos e pastas recursivamente
     for item in src.rglob("*"):
